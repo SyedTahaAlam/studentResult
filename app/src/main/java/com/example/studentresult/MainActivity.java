@@ -150,6 +150,11 @@ private int selected;
             public void onResponse(Call<HigherDiploma> call, Response<HigherDiploma> response) {
                 if(response.isSuccessful()) {
                     dialog.dismiss();
+                    if (response.body().getData().size() == 0) {
+                        Toast.makeText(MainActivity.this, "No User Found", Toast.LENGTH_SHORT).show();
+
+                    }
+
                     Log.i("result", "post submitted to API." + response.body().toString());
                     checkActivity(response.body());
                 }
@@ -178,7 +183,10 @@ private int selected;
             @Override
             public void onResponse(Call<Certificate> call, Response<Certificate> response) {
                 if(response.isSuccessful()) {
+                    if (response.body().getData().size() == 0) {
+                        Toast.makeText(MainActivity.this, "No User Found", Toast.LENGTH_SHORT).show();
 
+                    }
                     Log.i("result", "post submitted to API." + response.body().toString());
                     checkActivity(response.body());
                     dialog.dismiss();
@@ -270,6 +278,10 @@ private int selected;
             @Override
             public void onResponse(Call<Diploma> call, Response<Diploma> response) {
                 if(response.isSuccessful()) {
+                    if (response.body().getData().size() == 0) {
+                        Toast.makeText(MainActivity.this, "No User Found", Toast.LENGTH_SHORT).show();
+
+                    }
                     dialog.dismiss();
                     checkActivity(response.body());
                     Log.i("result", "post submitted to API." + response.body().toString());

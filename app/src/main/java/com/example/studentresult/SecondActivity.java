@@ -46,8 +46,8 @@ public class SecondActivity extends AppCompatActivity {
     }
 
     private void inflateHigherDiploma(com.example.studentresult.Model.HigherDiploma.Datum bodydata) {
-        TextView name = findViewById(R.id.student_name);
-        TextView no = findViewById(R.id.student_number);
+        TextView name = findViewById(R.id.nhd);
+        TextView no = findViewById(R.id.nohd);
         TextView procedure = findViewById(R.id.manage);
         TextView startegy = findViewById(R.id.strategy);
         TextView operation = findViewById(R.id.operational);
@@ -58,6 +58,7 @@ public class SecondActivity extends AppCompatActivity {
         TextView hr = findViewById(R.id.Hr);
         TextView research = findViewById(R.id.Methodology);
         TextView creative = findViewById(R.id.creative);
+        TextView financial = findViewById(R.id.financial);
 
 
         name.setText(bodydata.getStudentName());
@@ -73,12 +74,12 @@ public class SecondActivity extends AppCompatActivity {
         research.setText(bodydata.getResearchMethodology().toString());
         creative.setText(bodydata.getEntrepreneurCreativity().toString());
         global.setText(bodydata.getGlobalMarketing().toString());
-
+        financial.setText(bodydata.getGlobalMarketing().toString());
     }
 
     private void inflateDiploma(com.example.studentresult.Model.Diploma.Datum bodydata) {
-        TextView name = findViewById(R.id.student_name);
-        TextView no = findViewById(R.id.student_number);
+        TextView name = findViewById(R.id.nd);
+        TextView no = findViewById(R.id.nod);
         TextView ff = findViewById(R.id.ff);
         TextView maritime = findViewById(R.id.maritime);
         TextView multimodel = findViewById(R.id.multimodel);

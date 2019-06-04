@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">studentResult</string>
+    <string name="app_name">Student</string>
     <string-array name="api_services">
         <item>Diploma</item>
         <item>Higher Diploma</item>
