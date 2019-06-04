@@ -5,4 +5,6 @@
         <item>Higher Diploma</item>
         <item>Certificate</item>
     </string-array>
+
+    <string name="alert_dialog_message">Sorry,it\'s either you entered your student number wrongly or please visit the Education Office to clear any outstanding fees. Thank you</string>
 </resources>

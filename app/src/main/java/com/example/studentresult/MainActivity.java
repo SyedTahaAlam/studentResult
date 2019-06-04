@@ -1,10 +1,12 @@
 package com.example.studentresult;
 
+import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.ProgressDialog;
-import android.support.v4.content.ContextCompat;
-import android.support.v7.app.AppCompatActivity;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -13,19 +15,16 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
-import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.studentresult.HttpRequest.Services;
 import com.example.studentresult.HttpRequest.Utils;
 import com.example.studentresult.Model.Certificate.Certificate;
+import com.example.studentresult.Model.Certificate.Datum;
 import com.example.studentresult.Model.Diploma.Diploma;
 import com.example.studentresult.Model.HigherDiploma.HigherDiploma;
 import com.example.studentresult.Utils.NetworkUtil;
-
-import java.util.Collections;
-import java.util.List;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -152,6 +151,7 @@ private int selected;
                 if(response.isSuccessful()) {
                     dialog.dismiss();
                     Log.i("result", "post submitted to API." + response.body().toString());
+                    checkActivity(response.body());
                 }
                 else{
                     dialog.dismiss();
@@ -171,6 +171,7 @@ private int selected;
         });
     }
 
+
     private void getCertificate(String mStudentNumber) {
         mAPIService.getCertificate(mStudentNumber).enqueue(new Callback<Certificate>() {
 
@@ -179,6 +180,7 @@ private int selected;
                 if(response.isSuccessful()) {
 
                     Log.i("result", "post submitted to API." + response.body().toString());
+                    checkActivity(response.body());
                     dialog.dismiss();
                 }
             }
@@ -192,6 +194,73 @@ private int selected;
         });
     }
 
+    private void checkActivity(Certificate body) {
+        if (body.getData().size() > 0) {
+            Datum bodydata = body.getData().get(0);
+            if (bodydata.getIsActive().equals("n")) {
+                showInformationDialog();
+            } else {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("bodydata", bodydata);
+                bundle.putInt("type", 3);
+                Intent intent = new Intent(this, SecondActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        }
+    }
+
+    private void showInformationDialog() {
+        AlertDialog alertDialog = new AlertDialog.Builder(
+                MainActivity.this).create();
+
+
+        alertDialog.setMessage(getResources().getString(R.string.alert_dialog_message));
+
+
+        alertDialog.setButton("OK", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+
+                alertDialog.dismiss();
+            }
+        });
+
+
+        alertDialog.show();
+    }
+
+    private void checkActivity(HigherDiploma body) {
+        if (body.getData().size() > 0) {
+            com.example.studentresult.Model.HigherDiploma.Datum bodydata = body.getData().get(0);
+            if (bodydata.getIsActive().equals("n")) {
+                showInformationDialog();
+            } else {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("bodydata", bodydata);
+                bundle.putInt("type", 2);
+                Intent intent = new Intent(this, SecondActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        }
+    }
+
+    private void checkActivity(Diploma body) {
+        if (body.getData().size() > 0) {
+            com.example.studentresult.Model.Diploma.Datum bodydata = body.getData().get(0);
+            if (bodydata.getIsActive().equals("n")) {
+                showInformationDialog();
+            } else {
+                Bundle bundle = new Bundle();
+                bundle.putSerializable("bodydata", bodydata);
+                bundle.putInt("type", 1);
+                Intent intent = new Intent(this, SecondActivity.class);
+                intent.putExtras(bundle);
+                startActivity(intent);
+            }
+        }
+    }
+
     private void getDiploma(String mStudentNumber) {
 
 
@@ -202,7 +271,7 @@ private int selected;
             public void onResponse(Call<Diploma> call, Response<Diploma> response) {
                 if(response.isSuccessful()) {
                     dialog.dismiss();
-
+                    checkActivity(response.body());
                     Log.i("result", "post submitted to API." + response.body().toString());
                 }
             }

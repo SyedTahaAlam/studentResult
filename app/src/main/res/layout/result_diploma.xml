@@ -1,0 +1,653 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SecondActivity">
+
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/student_number_title"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Student Number"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/number"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/student_name_title"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Student Name"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/intro_to_ff_title"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Intro To FF"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/ff"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/intro_to_logistics_title"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Maritime Transport"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/maritime"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/intro_to_transportation_title"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Multimodal Transport"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/multimodel"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/intro_custom_procedure_title"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Sea Containers"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/sea"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/business_communication_title"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Air Transpost"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/air"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:id="@+id/statstitle"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Road Transpost"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/road"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Rail Transpost"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/rail"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Inland Waterway Transpost"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/inland"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Custom Procedure"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/custom"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Logistics And Wearhouses"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/logistics"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Transport Insurance"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/insure"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="ICT In Forwarding"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/forwarding"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Dangerous Goods"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/danger"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="Safety And Security"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/security"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

@@ -3,8 +3,10 @@ package com.example.studentresult.Model.Certificate;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import java.io.Serializable;
 import java.util.List;
-public class Certificate {
+
+public class Certificate implements Serializable {
 
     @SerializedName("success")
     @Expose
