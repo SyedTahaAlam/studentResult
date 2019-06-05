@@ -26,7 +26,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Student Number"
+                android:text="@string/student_number"
                 android:textSize="16sp" />
 
             <View
@@ -65,7 +65,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Student Name"
+                android:text="@string/student_name"
                 android:textSize="16sp" />
 
             <View
@@ -80,7 +80,7 @@
                 android:layout_weight=".4"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
-
+                android:singleLine="true"
                 android:text="hwllo"
                 android:textSize="16sp" />
 
@@ -105,7 +105,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Intro To FF"
+                android:text="@string/intro_to_ff"
                 android:textSize="16sp" />
 
             <View
@@ -144,7 +144,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Maritime Transport"
+                android:text="@string/maritime_transport"
                 android:textSize="16sp" />
 
             <View
@@ -185,7 +185,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Multimodal Transport"
+                android:text="@string/multimodal_transport"
                 android:textSize="16sp" />
 
             <View
@@ -225,7 +225,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Sea Containers"
+                android:text="@string/sea_containers"
                 android:textSize="16sp" />
 
             <View
@@ -266,7 +266,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Air Transpost"
+                android:text="@string/air_transpost"
                 android:textSize="16sp" />
 
             <View
@@ -308,7 +308,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Road Transpost"
+                android:text="@string/road_transpost"
                 android:textSize="16sp" />
 
             <View
@@ -347,7 +347,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Rail Transpost"
+                android:text="@string/rail_transpost"
                 android:textSize="16sp" />
 
             <View
@@ -387,7 +387,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Inland Waterway Transpost"
+                android:text="@string/inland_waterway_transport"
                 android:textSize="16sp" />
 
             <View
@@ -426,7 +426,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Custom Procedure"
+                android:text="@string/custom_procedure"
                 android:textSize="16sp" />
 
             <View
@@ -466,7 +466,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Logistics And Wearhouses"
+                android:text="@string/logistics_and_wearhouses"
                 android:textSize="16sp" />
 
             <View
@@ -505,7 +505,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Transport Insurance"
+                android:text="@string/transport_insurance"
                 android:textSize="16sp" />
 
             <View
@@ -545,7 +545,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="ICT In Forwarding"
+                android:text="@string/ict_in_forwarding"
                 android:textSize="16sp" />
 
             <View
@@ -584,7 +584,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Dangerous Goods"
+                android:text="@string/dangerous_goods"
                 android:textSize="16sp" />
 
             <View
@@ -624,7 +624,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Safety And Security"
+                android:text="@string/safety_and_security"
                 android:textSize="16sp" />
 
             <View
@@ -649,5 +649,45 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="@string/percentage"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/pd"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
     </LinearLayout>
 </android.support.v4.widget.NestedScrollView>

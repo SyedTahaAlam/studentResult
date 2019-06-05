@@ -1,11 +1,14 @@
 package com.example.studentresult;
 
+import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
 
 import com.example.studentresult.Model.Certificate.Datum;
+
+import java.text.DecimalFormat;
 
 public class SecondActivity extends AppCompatActivity {
 
@@ -40,7 +43,14 @@ public class SecondActivity extends AppCompatActivity {
 
                     Log.e("certificate", bundle.getSerializable("bodydata").toString());
                     break;
+                case 3:
+                    setContentView(R.layout.result_higher_diploma);
+                    inflateCertificate((Datum) bundle.getSerializable("bodydata"));
+
+                    Log.e("certificate", bundle.getSerializable("bodydata").toString());
+                    break;
             }
+
         }
 
     }
@@ -59,10 +69,11 @@ public class SecondActivity extends AppCompatActivity {
         TextView research = findViewById(R.id.Methodology);
         TextView creative = findViewById(R.id.creative);
         TextView financial = findViewById(R.id.financial);
-
+        TextView pc = findViewById(R.id.phd);
 
         name.setText(bodydata.getStudentName());
-        no.setText(bodydata.getId().toString());
+        name.setOnClickListener(v -> showDialog(name.getText().toString()));
+        no.setText(bodydata.getStudentNumber());
         procedure.setText(bodydata.getProcurementManagement().toString());
         startegy.setText(bodydata.getStrategicManagement().toString());
         operation.setText(bodydata.getProductionAndOperational().toString());
@@ -74,7 +85,23 @@ public class SecondActivity extends AppCompatActivity {
         research.setText(bodydata.getResearchMethodology().toString());
         creative.setText(bodydata.getEntrepreneurCreativity().toString());
         global.setText(bodydata.getGlobalMarketing().toString());
-        financial.setText(bodydata.getGlobalMarketing().toString());
+        financial.setText(bodydata.getFinancialManagement().toString());
+
+        double percentage = ((bodydata.getProcurementManagement()
+                + bodydata.getStrategicManagement()
+                + bodydata.getProductionAndOperational()
+                + bodydata.getInternationalTransportManagement()
+                + bodydata.getSupplyChainManagement()
+                + bodydata.getGlobalMarketing()
+                + bodydata.getBusinessLaw()
+                + bodydata.getHumanResourcesManagement()
+                + bodydata.getResearchMethodology()
+                + bodydata.getEntrepreneurCreativity()
+                + bodydata.getGlobalMarketing()
+                + bodydata.getFinancialManagement()) / 1200d) * 100d;
+        DecimalFormat numberFormat = new DecimalFormat("#.000");
+
+        pc.setText(String.valueOf(numberFormat.format(percentage)));
     }
 
     private void inflateDiploma(com.example.studentresult.Model.Diploma.Datum bodydata) {
@@ -94,9 +121,12 @@ public class SecondActivity extends AppCompatActivity {
         TextView danger = findViewById(R.id.danger);
         TextView forwarding = findViewById(R.id.forwarding);
         TextView security = findViewById(R.id.security);
+        TextView pc = findViewById(R.id.pd);
 
         name.setText(bodydata.getStudentName());
-        no.setText(bodydata.getId().toString());
+
+        no.setText(bodydata.getStudentNumber());
+        name.setOnClickListener(v -> showDialog(name.getText().toString()));
         ff.setText(bodydata.getIntroToFf().toString());
         maritime.setText(bodydata.getMaritimeTransport().toString());
         multimodel.setText(bodydata.getMultimodalTransport().toString());
@@ -111,6 +141,24 @@ public class SecondActivity extends AppCompatActivity {
         danger.setText(bodydata.getDangerousGoods().toString());
         forwarding.setText(bodydata.getIctInForwarding().toString());
         security.setText(bodydata.getSafetyAndSecurity().toString());
+
+        double percentage = ((bodydata.getRoadTransport()
+                + bodydata.getIntroToFf()
+                + bodydata.getMaritimeTransport()
+                + bodydata.getMultimodalTransport()
+                + bodydata.getSeaContainers()
+                + bodydata.getAirTransport()
+                + bodydata.getRailTransport()
+                + bodydata.getInlandWaterwayTransport()
+                + bodydata.getCustomsProcedures()
+                + bodydata.getLogisticsAndWarehousing()
+                + bodydata.getTransportInsurance()
+                + bodydata.getDangerousGoods()
+                + bodydata.getIctInForwarding()
+                + bodydata.getSafetyAndSecurity()) / 1400d) * 100d;
+        DecimalFormat numberFormat = new DecimalFormat("#.000");
+
+        pc.setText(String.valueOf(numberFormat.format(percentage)));
     }
 
     private void inflateCertificate(Datum bodydata) {
@@ -122,16 +170,41 @@ public class SecondActivity extends AppCompatActivity {
         TextView transport = findViewById(R.id.intro_to_transportation);
         TextView custom = findViewById(R.id.intro_custom_procedure);
         TextView stats = findViewById(R.id.stats);
+        TextView pc = findViewById(R.id.pc);
 
 
         name.setText(bodydata.getStudentName());
-        no.setText(bodydata.getId().toString());
+        name.setOnClickListener(v -> showDialog(name.getText().toString()));
+        no.setText(bodydata.getStudentNumber());
         ff.setText(bodydata.getIntroToFf().toString());
         logistics.setText(bodydata.getIntroToLogistics().toString());
         business.setText(bodydata.getBusinessCommunication().toString());
         transport.setText(bodydata.getIntroToTransportation().toString());
         custom.setText(bodydata.getIntroToCustomsProcedures().toString());
         stats.setText(bodydata.getStatisticsAndBm().toString());
+        double percentage = ((bodydata.getIntroToFf()
+                + bodydata.getIntroToLogistics()
+                + bodydata.getBusinessCommunication()
+                + bodydata.getIntroToTransportation()
+                + bodydata.getIntroToCustomsProcedures()
+                + bodydata.getStatisticsAndBm()) / 600d) * 100d;
+        DecimalFormat numberFormat = new DecimalFormat("#.000");
+
+        pc.setText(String.valueOf(numberFormat.format(percentage)));
+    }
+
+    public void showDialog(String name) {
+
+        final Dialog dialog = new Dialog(SecondActivity.this);
+        // dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+
+        dialog.setContentView(R.layout.activity_second);
+
+
+        TextView nameView = dialog.findViewById(R.id.name);
+        nameView.setText(name);
+
+        dialog.show();
 
     }
 }

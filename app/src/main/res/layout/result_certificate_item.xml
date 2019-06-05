@@ -26,7 +26,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Student Number"
+                android:text="@string/student_number"
                 android:textSize="16sp" />
 
             <View
@@ -65,7 +65,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Student Name"
+                android:text="@string/student_name"
                 android:textSize="16sp" />
 
             <View
@@ -80,7 +80,7 @@
                 android:layout_weight=".4"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
-
+                android:singleLine="true"
                 android:text="hwllo"
                 android:textSize="16sp" />
 
@@ -105,7 +105,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Intro To FF"
+                android:text="@string/intro_to_ff"
                 android:textSize="16sp" />
 
             <View
@@ -144,7 +144,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Intro To Logistics"
+                android:text="@string/intro_to_logistics"
                 android:textSize="16sp" />
 
             <View
@@ -185,7 +185,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Intro To Transportation"
+                android:text="@string/intro_to_transportation"
                 android:textSize="16sp" />
 
             <View
@@ -225,7 +225,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Intro Custom Procedure"
+                android:text="@string/intro_custom_procedure"
                 android:textSize="16sp" />
 
             <View
@@ -266,7 +266,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Business Communication"
+                android:text="@string/business_communication"
                 android:textSize="16sp" />
 
             <View
@@ -308,7 +308,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Statistics And BM"
+                android:text="@string/statistics_and_bm"
                 android:textSize="16sp" />
 
             <View
@@ -333,6 +333,41 @@
             android:layout_width="match_parent"
             android:layout_height="1dp"
             android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/grey"
+            android:orientation="horizontal">
+
+            <TextView
+
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="@string/percentage"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/pc"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
 
         <View
             android:layout_width="match_parent"

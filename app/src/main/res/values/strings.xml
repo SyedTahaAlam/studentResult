@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Student</string>
+    <string name="app_name">Exam Result</string>
     <string-array name="api_services">
         <item>Diploma</item>
         <item>Higher Diploma</item>
@@ -7,4 +7,38 @@
     </string-array>
 
     <string name="alert_dialog_message">Sorry,it\'s either you entered your student number wrongly or please visit the Education Office to clear any outstanding fees. Thank you</string>
+
+    <string name="statistics_and_bm">Statistics And BM</string>
+    <string name="business_communication">Business Communication</string>
+    <string name="intro_custom_procedure">Intro Custom Procedure</string>
+    <string name="intro_to_transportation">Intro To Transportation</string>
+    <string name="intro_to_logistics">Intro To Logistics</string>
+    <string name="student_name">Student Name</string>
+    <string name="intro_to_ff">Intro To FF</string>
+    <string name="maritime_transport">Maritime Transport</string>
+    <string name="multimodal_transport">Multimodal Transport</string>
+    <string name="sea_containers">Sea Containers</string>
+    <string name="air_transpost">Air Transport</string>
+    <string name="road_transpost">Road Transport</string>
+    <string name="rail_transpost">Rail Transport</string>
+    <string name="inland_waterway_transport">Inland Waterway Transport</string>
+    <string name="custom_procedure">Custom Procedure</string>
+    <string name="logistics_and_wearhouses">Logistics And Wearhouses</string>
+    <string name="transport_insurance">Transport Insurance</string>
+    <string name="ict_in_forwarding">ICT In Forwarding</string>
+    <string name="dangerous_goods">Dangerous Goods</string>
+    <string name="safety_and_security">Safety And Security</string>
+    <string name="percentage">Percentage</string>
+    <string name="procedure_management">Procedure Management</string>
+    <string name="strategic_management">Strategic Management</string>
+    <string name="protection_and_operational">Protection And Operational</string>
+    <string name="international_transport_management">International Transport Management</string>
+    <string name="supply_chain_management">Supply Chain Management</string>
+    <string name="financial_management">Financial Management</string>
+    <string name="global_marketing">Global Marketing</string>
+    <string name="business_law">Business Law</string>
+    <string name="human_resource_management">Human Resource Management</string>
+    <string name="storage_methodology">Storage Methodology</string>
+    <string name="entrepreneur_creativity">Entrepreneur Creativity</string>
+    <string name="student_number">Student Number</string>
 </resources>

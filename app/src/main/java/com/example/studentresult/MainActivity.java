@@ -307,11 +307,10 @@ private int selected;
 
         final Dialog dialog = new Dialog(MainActivity.this);
         // dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
-        dialog.setCancelable(false);
         dialog.setContentView(R.layout.dialog_list);
 
 
-        ListView listView = (ListView) dialog.findViewById(R.id.listview);
+        ListView listView = dialog.findViewById(R.id.listview);
         ArrayAdapter arrayAdapter = new ArrayAdapter(this,R.layout.list_item, R.id.tv, mCoursesName);
         listView.setAdapter(arrayAdapter);
 

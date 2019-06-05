@@ -26,7 +26,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Student Number"
+                android:text="@string/student_number"
                 android:textSize="16sp" />
 
             <View
@@ -65,7 +65,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Student Name"
+                android:text="@string/student_name"
                 android:textSize="16sp" />
 
             <View
@@ -80,7 +80,7 @@
                 android:layout_weight=".4"
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
-
+                android:singleLine="true"
                 android:text="hwllo"
                 android:textSize="16sp" />
 
@@ -105,7 +105,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Procedure Management"
+                android:text="@string/procedure_management"
                 android:textSize="16sp" />
 
             <View
@@ -144,7 +144,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Strategic Management"
+                android:text="@string/strategic_management"
                 android:textSize="16sp" />
 
             <View
@@ -185,7 +185,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Protection And Operational"
+                android:text="@string/protection_and_operational"
                 android:textSize="16sp" />
 
             <View
@@ -225,7 +225,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="12dp"
                 android:singleLine="true"
-                android:text="International Transport Management"
+                android:text="@string/international_transport_management"
                 android:textSize="16sp" />
 
             <View
@@ -266,7 +266,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Supply Chain Management"
+                android:text="@string/supply_chain_management"
                 android:textSize="16sp" />
 
             <View
@@ -308,7 +308,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Financial Management"
+                android:text="@string/financial_management"
                 android:textSize="16sp" />
 
             <View
@@ -347,7 +347,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Global MArketing"
+                android:text="@string/global_marketing"
                 android:textSize="16sp" />
 
             <View
@@ -387,7 +387,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Business Law"
+                android:text="@string/business_law"
                 android:textSize="16sp" />
 
             <View
@@ -426,7 +426,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
                 android:singleLine="true"
-                android:text="Human Resource Management"
+                android:text="@string/human_resource_management"
                 android:textSize="16sp" />
 
             <View
@@ -466,7 +466,7 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Storage Methodology"
+                android:text="@string/storage_methodology"
                 android:textSize="16sp" />
 
             <View
@@ -505,7 +505,8 @@
                 android:gravity="center_vertical"
                 android:paddingLeft="15dp"
 
-                android:text="Entrepreneur Creativity"
+                android:paddingStart="15dp"
+                android:text="@string/entrepreneur_creativity"
                 android:textSize="16sp" />
 
             <View
@@ -515,6 +516,46 @@
 
             <TextView
                 android:id="@+id/creative"
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".4"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="hwllo"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/line" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="56dp"
+                android:layout_weight=".6"
+                android:gravity="center_vertical"
+                android:paddingLeft="15dp"
+
+                android:text="@string/percentage"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:background="@color/line" />
+
+            <TextView
+                android:id="@+id/phd"
                 android:layout_width="0dp"
                 android:layout_height="56dp"
                 android:layout_weight=".4"
