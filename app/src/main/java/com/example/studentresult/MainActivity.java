@@ -34,6 +34,8 @@ public class MainActivity extends AppCompatActivity implements MenuItem.OnMenuIt
 
 private TextView selectcourse;
 private EditText enterStd;
+    private EditText code;
+
 private Button generateResult;
 private Services mAPIService;
 private ProgressDialog dialog;
@@ -46,6 +48,7 @@ private int selected;
 
     public void init(){
         selectcourse=findViewById(R.id.selectcourse);
+        code = findViewById(R.id.secretcode);
         enterStd=findViewById(R.id.enterstudent);
         generateResult=findViewById(R.id.generateresult);
         mAPIService = Utils.getAPIService();
@@ -104,42 +107,15 @@ private int selected;
                 
         });
         selectcourse.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-//        PopupMenu dropDownMenu = new PopupMenu(getApplicationContext(),selectcourse);
-//        dropDownMenu.getMenuInflater().inflate(R.menu.drop_down_menu, dropDownMenu.getMenu());
-//        selectcourse.setText("Select Result");
-//        dropDownMenu.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
-//
-//            @Override
-//            public boolean onMenuItemClick(MenuItem menuItem) {
-//                selectcourse.setText(menuItem.getTitle());
-//                selected=menuItem.getItemId();
-//                return true;
-//            }
-//        });
-//        dropDownMenu.show();
-        showDialog();
-    }
+            @Override
+            public void onClick(View v) {
+                //
+                if (code.getError() != null) {
+                    code.setError(null);
+                }
+                showDialog();
+            }
 });
-//
-//spinner.setOnItemClickListener(this);
-//        List<String> categories = new ArrayList<String>();
-//        categories.add("Item 1");
-//        categories.add("Item 2");
-//        categories.add("Item 3");
-//        categories.add("Item 4");
-//        categories.add("Item 5");
-//        categories.add("Item 6");
-//
-//        // Creating adapter for spinner
-//        ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, categories);
-//
-//        // Drop down layout style - list view with radio button
-//        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-//
-//        // attaching data adapter to spinner
-//        spinner.setAdapter(dataAdapter);
 
     }
 
@@ -153,10 +129,17 @@ private int selected;
                     if (response.body().getData().size() == 0) {
                         Toast.makeText(MainActivity.this, "No User Found", Toast.LENGTH_SHORT).show();
 
-                    }
+                    } else {
+                        if (response.body().getData().get(0).getSecretCode().equalsIgnoreCase(code.getText().toString())) {
 
-                    Log.i("result", "post submitted to API." + response.body().toString());
-                    checkActivity(response.body());
+                            Log.i("result", "post submitted to API." + response.body().toString());
+                            checkActivity(response.body());
+                        } else {
+                            code.setError("Code Doesn\'t Match");
+                            code.requestFocus();
+                        }
+                        dialog.dismiss();
+                    }
                 }
                 else{
                     dialog.dismiss();
@@ -186,10 +169,17 @@ private int selected;
                     if (response.body().getData().size() == 0) {
                         Toast.makeText(MainActivity.this, "No User Found", Toast.LENGTH_SHORT).show();
 
+                    } else {
+                        if (response.body().getData().get(0).getSecretCode().equalsIgnoreCase(code.getText().toString())) {
+
+                            Log.i("result", "post submitted to API." + response.body().toString());
+                            checkActivity(response.body());
+                        } else {
+                            code.setError("Code Doesn\'t Match");
+                            code.requestFocus();
+                        }
+                        dialog.dismiss();
                     }
-                    Log.i("result", "post submitted to API." + response.body().toString());
-                    checkActivity(response.body());
-                    dialog.dismiss();
                 }
             }
 
@@ -281,10 +271,16 @@ private int selected;
                     if (response.body().getData().size() == 0) {
                         Toast.makeText(MainActivity.this, "No User Found", Toast.LENGTH_SHORT).show();
 
+                    } else {
+                        if (response.body().getData().get(0).getSecretCode().equalsIgnoreCase(code.getText().toString())) {
+                            Log.i("result", "post submitted to API." + response.body().toString());
+                            checkActivity(response.body());
+                        } else {
+                            code.setError("Code Doesn\'t Match");
+                            code.requestFocus();
+                        }
+                        dialog.dismiss();
                     }
-                    dialog.dismiss();
-                    checkActivity(response.body());
-                    Log.i("result", "post submitted to API." + response.body().toString());
                 }
             }
 

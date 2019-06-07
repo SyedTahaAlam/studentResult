@@ -56,6 +56,18 @@ public class Datum implements Serializable {
     @Expose
     private String createdDate;
 
+    @SerializedName("secret_code")
+    @Expose
+    private String secretCode;
+
+
+    public String getSecretCode() {
+        return secretCode;
+    }
+
+    public void setSecretCode(String secretCode) {
+        this.secretCode = secretCode;
+    }
     public Integer getId() {
         return id;
     }
@@ -203,6 +215,7 @@ public class Datum implements Serializable {
                 ", entrepreneurCreativity=" + entrepreneurCreativity +
                 ", isActive='" + isActive + '\'' +
                 ", createdDate='" + createdDate + '\'' +
+                ", secretCode='" + secretCode + '\'' +
                 '}';
     }
 }
