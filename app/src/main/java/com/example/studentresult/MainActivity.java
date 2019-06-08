@@ -7,7 +7,6 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
@@ -50,6 +49,7 @@ private int selected;
         selectcourse=findViewById(R.id.selectcourse);
         code = findViewById(R.id.secretcode);
         enterStd=findViewById(R.id.enterstudent);
+        enterStd.setText("");
         generateResult=findViewById(R.id.generateresult);
         mAPIService = Utils.getAPIService();
         selectcourse.setText("Select Result");
@@ -58,34 +58,40 @@ private int selected;
         dialog.setTitle("Requesting...");
 
     }
+
+    @Override
+    protected void onResume() {
+        super.onResume();
+        enterStd.setText("");
+    }
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         init();
-        
-        
-        
+
+
         generateResult.setOnClickListener(v->{
             if (!enterStd.getText().toString().equals(""))
                 if (NetworkUtil.isConnectedToInternet(MainActivity.this) ){
                     dialog.show();
-                switch(selected){
-                case 0:
-                getDiploma(enterStd.getText().toString());
-                break;
+                    switch(selected){
+                        case 0:
+                            getDiploma(enterStd.getText().toString());
+                            break;
 
 
-                case 1:
-                    getHigherDiploma(enterStd.getText().toString());
+                        case 1:
+                            getHigherDiploma(enterStd.getText().toString());
 
-                    break;
+                            break;
 
-                case 2:
-                    getCertificate(enterStd.getText().toString());
-                    break;
+                        case 2:
+                            getCertificate(enterStd.getText().toString());
+                            break;
 
-             }}else{
+                    }}else{
                     NetworkUtil.showNoInternetAvailableErrorDialog(MainActivity.this);
                 }
 //            switch(selected){
@@ -104,15 +110,12 @@ private int selected;
 //                    break;
 //
 //            }
-                
+
         });
         selectcourse.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                //
-                if (code.getError() != null) {
-                    code.setError(null);
-                }
+
                 showDialog();
             }
 });
@@ -129,17 +132,9 @@ private int selected;
                     if (response.body().getData().size() == 0) {
                         Toast.makeText(MainActivity.this, "No User Found", Toast.LENGTH_SHORT).show();
 
-                    } else {
-                        if (response.body().getData().get(0).getSecretCode().equalsIgnoreCase(code.getText().toString())) {
-
-                            Log.i("result", "post submitted to API." + response.body().toString());
-                            checkActivity(response.body());
-                        } else {
-                            code.setError("Code Doesn\'t Match");
-                            code.requestFocus();
-                        }
-                        dialog.dismiss();
                     }
+                    checkActivity(response.body());
+                    dialog.dismiss();
                 }
                 else{
                     dialog.dismiss();
@@ -169,17 +164,9 @@ private int selected;
                     if (response.body().getData().size() == 0) {
                         Toast.makeText(MainActivity.this, "No User Found", Toast.LENGTH_SHORT).show();
 
-                    } else {
-                        if (response.body().getData().get(0).getSecretCode().equalsIgnoreCase(code.getText().toString())) {
-
-                            Log.i("result", "post submitted to API." + response.body().toString());
-                            checkActivity(response.body());
-                        } else {
-                            code.setError("Code Doesn\'t Match");
-                            code.requestFocus();
-                        }
-                        dialog.dismiss();
                     }
+                    checkActivity(response.body());
+                    dialog.dismiss();
                 }
             }
 
@@ -201,7 +188,7 @@ private int selected;
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("bodydata", bodydata);
                 bundle.putInt("type", 3);
-                Intent intent = new Intent(this, SecondActivity.class);
+                Intent intent = new Intent(this, CodeActivity.class);
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
@@ -236,7 +223,8 @@ private int selected;
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("bodydata", bodydata);
                 bundle.putInt("type", 2);
-                Intent intent = new Intent(this, SecondActivity.class);
+                Intent intent = new Intent(this, CodeActivity.class);
+
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
@@ -252,7 +240,8 @@ private int selected;
                 Bundle bundle = new Bundle();
                 bundle.putSerializable("bodydata", bodydata);
                 bundle.putInt("type", 1);
-                Intent intent = new Intent(this, SecondActivity.class);
+                Intent intent = new Intent(this, CodeActivity.class);
+
                 intent.putExtras(bundle);
                 startActivity(intent);
             }
@@ -271,16 +260,9 @@ private int selected;
                     if (response.body().getData().size() == 0) {
                         Toast.makeText(MainActivity.this, "No User Found", Toast.LENGTH_SHORT).show();
 
-                    } else {
-                        if (response.body().getData().get(0).getSecretCode().equalsIgnoreCase(code.getText().toString())) {
-                            Log.i("result", "post submitted to API." + response.body().toString());
-                            checkActivity(response.body());
-                        } else {
-                            code.setError("Code Doesn\'t Match");
-                            code.requestFocus();
-                        }
-                        dialog.dismiss();
                     }
+                    checkActivity(response.body());
+                    dialog.dismiss();
                 }
             }
 

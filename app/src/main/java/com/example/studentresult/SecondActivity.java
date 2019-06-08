@@ -37,14 +37,14 @@ public class SecondActivity extends AppCompatActivity {
 
                     Log.e("certificate", bundle.getSerializable("bodydata").toString());
                     break;
-                case 2:
+                case 3:
                     setContentView(R.layout.result_higher_diploma);
                     inflateHigherDiploma((com.example.studentresult.Model.HigherDiploma.Datum) bundle.getSerializable("bodydata"));
 
                     Log.e("certificate", bundle.getSerializable("bodydata").toString());
                     break;
-                case 3:
-                    setContentView(R.layout.result_higher_diploma);
+                case 2:
+                    setContentView(R.layout.result_certificate_item);
                     inflateCertificate((Datum) bundle.getSerializable("bodydata"));
 
                     Log.e("certificate", bundle.getSerializable("bodydata").toString());
