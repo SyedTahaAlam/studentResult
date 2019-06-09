@@ -46,7 +46,7 @@
           android:layout_height="0dp"
           android:layout_weight="0.1"
           android:background="@drawable/round_blue_btn"
-          android:hint="Enter Student*"
+          android:hint="@string/enter_student_number"
           android:gravity="center_vertical"
           android:paddingLeft="10dp"
           android:singleLine="true"
