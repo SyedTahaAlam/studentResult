@@ -36,7 +36,7 @@ public class CodeActivity extends AppCompatActivity {
                             break;
                         case 2:
 
-                            checkCode((Datum) bundle.getSerializable("bodydata"));
+                            checkCode((org.ghanafreightforwarders.examresult.Model.HigherDiploma.Datum) bundle.getSerializable("bodydata"));
 
                             Log.e("certificate", bundle.getSerializable("bodydata").toString());
                             break;

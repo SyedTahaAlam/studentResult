@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Exam Result</string>
+    <string name="app_name">GIFF Exam Result</string>
     <string-array name="api_services">
         <item>Diploma</item>
         <item>Higher Diploma</item>
