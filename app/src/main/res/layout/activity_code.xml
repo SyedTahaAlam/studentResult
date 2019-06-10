@@ -35,7 +35,7 @@
                 android:layout_weight="0.1"
                 android:background="@drawable/round_blue_btn"
                 android:gravity="center_vertical"
-                android:hint="Enter Code*"
+                android:hint="@string/enter_security_code"
                 android:paddingLeft="10dp"
                 android:singleLine="true"
                 android:textSize="15dp" />

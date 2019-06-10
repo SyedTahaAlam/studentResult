@@ -1,4 +1,4 @@
-package com.example.examresult;
+package org.ghanafreightforwarders.examresult;
 
 import org.junit.Test;
 

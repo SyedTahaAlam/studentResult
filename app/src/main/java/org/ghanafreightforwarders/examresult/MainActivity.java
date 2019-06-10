@@ -52,7 +52,7 @@ private int selected;
         enterStd.setText("");
         generateResult=findViewById(R.id.generateresult);
         mAPIService = Utils.getAPIService();
-        selectcourse.setText("Select Result");
+        selectcourse.setText(getResources().getString(R.string.select_course));
 //        spinner = findViewById(R.id.spinner);
         dialog=new ProgressDialog(this);
         dialog.setTitle("Requesting...");
@@ -74,25 +74,30 @@ private int selected;
 
         generateResult.setOnClickListener(v->{
             if (!enterStd.getText().toString().equals("")) {
-                if (NetworkUtil.isConnectedToInternet(MainActivity.this) ){
-                    dialog.show();
-                    switch(selected){
-                        case 0:
-                            getDiploma(enterStd.getText().toString());
-                            break;
+                if (!selectcourse.getText().equals(getResources().getString(R.string.select_course))) {
+                    if (NetworkUtil.isConnectedToInternet(MainActivity.this) ){
+                        dialog.show();
+                        switch(selected){
+                            case 0:
+                                getDiploma(enterStd.getText().toString());
+                                break;
 
 
-                        case 1:
-                            getHigherDiploma(enterStd.getText().toString());
+                            case 1:
+                                getHigherDiploma(enterStd.getText().toString());
 
-                            break;
+                                break;
 
-                        case 2:
-                            getCertificate(enterStd.getText().toString());
-                            break;
+                            case 2:
+                                getCertificate(enterStd.getText().toString());
+                                break;
 
-                    }}else{
-                    NetworkUtil.showNoInternetAvailableErrorDialog(MainActivity.this);
+                        }}else{
+                        NetworkUtil.showNoInternetAvailableErrorDialog(MainActivity.this);
+                    }
+                } else {
+                    Toast.makeText(this, "Please Select A Course", Toast.LENGTH_SHORT).show();
+
                 }
             } else {
                 Toast.makeText(this, "Student Number Is Empty", Toast.LENGTH_SHORT).show();
