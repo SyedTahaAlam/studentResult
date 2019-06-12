@@ -1,4 +1,4 @@
-package org.ghanafreightforwarders.examresult.Model.Certificate;
+package com.ghana.examresult.Model.Certificate;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;

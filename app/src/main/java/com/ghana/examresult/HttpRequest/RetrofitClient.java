@@ -1,4 +1,4 @@
-package org.ghanafreightforwarders.examresult.HttpRequest;
+package com.ghana.examresult.HttpRequest;
 
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;

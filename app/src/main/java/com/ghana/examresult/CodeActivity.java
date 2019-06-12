@@ -1,4 +1,4 @@
-package org.ghanafreightforwarders.examresult;
+package com.ghana.examresult;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import org.ghanafreightforwarders.examresult.Model.Certificate.Datum;
+import com.ghana.examresult.Model.HigherDiploma.Datum;
 
 public class CodeActivity extends AppCompatActivity {
 
@@ -30,18 +30,18 @@ public class CodeActivity extends AppCompatActivity {
                     switch (bundle.getInt("type")) {
                         case 1:
 
-                            checkCode((org.ghanafreightforwarders.examresult.Model.Diploma.Datum) bundle.getSerializable("bodydata"));
+                            checkCode((com.ghana.examresult.Model.Diploma.Datum) bundle.getSerializable("bodydata"));
 
                             Log.e("certificate", bundle.getSerializable("bodydata").toString());
                             break;
                         case 2:
 
-                            checkCode((org.ghanafreightforwarders.examresult.Model.HigherDiploma.Datum) bundle.getSerializable("bodydata"));
+                            checkCode((Datum) bundle.getSerializable("bodydata"));
 
                             Log.e("certificate", bundle.getSerializable("bodydata").toString());
                             break;
                         case 3:
-                            checkCode((Datum) bundle.getSerializable("bodydata"));
+                            checkCode((com.ghana.examresult.Model.Certificate.Datum) bundle.getSerializable("bodydata"));
 
                             Log.e("certificate", bundle.getSerializable("bodydata").toString());
                             break;
@@ -56,7 +56,7 @@ public class CodeActivity extends AppCompatActivity {
 
     }
 
-    private void checkCode(org.ghanafreightforwarders.examresult.Model.HigherDiploma.Datum bodydata) {
+    private void checkCode(Datum bodydata) {
         if (bodydata.getSecretCode().equalsIgnoreCase(codestr)) {
             Bundle bundle = new Bundle();
             bundle.putSerializable("bodydata", bodydata);
@@ -72,7 +72,7 @@ public class CodeActivity extends AppCompatActivity {
 
     }
 
-    private void checkCode(Datum bodydata) {
+    private void checkCode(com.ghana.examresult.Model.Certificate.Datum bodydata) {
         if (bodydata.getSecretCode().equalsIgnoreCase(codestr)) {
             Bundle bundle = new Bundle();
             bundle.putSerializable("bodydata", bodydata);
@@ -87,7 +87,7 @@ public class CodeActivity extends AppCompatActivity {
         }
     }
 
-    private void checkCode(org.ghanafreightforwarders.examresult.Model.Diploma.Datum bodydata) {
+    private void checkCode(com.ghana.examresult.Model.Diploma.Datum bodydata) {
         if (bodydata.getSecretCode().equalsIgnoreCase(codestr)) {
             Bundle bundle = new Bundle();
             bundle.putSerializable("bodydata", bodydata);

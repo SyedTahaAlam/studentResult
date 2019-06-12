@@ -1,4 +1,4 @@
-package org.ghanafreightforwarders.examresult;
+package com.ghana.examresult;
 
 import android.content.Intent;
 import android.os.Bundle;

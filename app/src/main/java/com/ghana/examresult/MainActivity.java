@@ -1,4 +1,4 @@
-package org.ghanafreightforwarders.examresult;
+package com.ghana.examresult;
 
 import android.app.AlertDialog;
 import android.app.Dialog;
@@ -17,13 +17,13 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import org.ghanafreightforwarders.examresult.HttpRequest.Services;
-import org.ghanafreightforwarders.examresult.HttpRequest.Utils;
-import org.ghanafreightforwarders.examresult.Model.Certificate.Certificate;
-import org.ghanafreightforwarders.examresult.Model.Certificate.Datum;
-import org.ghanafreightforwarders.examresult.Model.Diploma.Diploma;
-import org.ghanafreightforwarders.examresult.Model.HigherDiploma.HigherDiploma;
-import org.ghanafreightforwarders.examresult.Utils.NetworkUtil;
+import com.ghana.examresult.HttpRequest.Services;
+import com.ghana.examresult.HttpRequest.Utils;
+import com.ghana.examresult.Model.Certificate.Certificate;
+import com.ghana.examresult.Model.Diploma.Diploma;
+import com.ghana.examresult.Model.HigherDiploma.Datum;
+import com.ghana.examresult.Model.HigherDiploma.HigherDiploma;
+import com.ghana.examresult.Utils.NetworkUtil;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -63,6 +63,7 @@ private int selected;
     protected void onResume() {
         super.onResume();
         enterStd.setText("");
+        selectcourse.setText(getResources().getString(R.string.select_course));
     }
 
     @Override
@@ -189,7 +190,7 @@ private int selected;
 
     private void checkActivity(Certificate body) {
         if (body.getData().size() > 0) {
-            Datum bodydata = body.getData().get(0);
+            com.ghana.examresult.Model.Certificate.Datum bodydata = body.getData().get(0);
             if (bodydata.getIsActive().equals("n")) {
                 showInformationDialog();
             } else {
@@ -224,7 +225,7 @@ private int selected;
 
     private void checkActivity(HigherDiploma body) {
         if (body.getData().size() > 0) {
-            org.ghanafreightforwarders.examresult.Model.HigherDiploma.Datum bodydata = body.getData().get(0);
+            Datum bodydata = body.getData().get(0);
             if (bodydata.getIsActive().equals("n")) {
                 showInformationDialog();
             } else {
@@ -241,7 +242,7 @@ private int selected;
 
     private void checkActivity(Diploma body) {
         if (body.getData().size() > 0) {
-            org.ghanafreightforwarders.examresult.Model.Diploma.Datum bodydata = body.getData().get(0);
+            com.ghana.examresult.Model.Diploma.Datum bodydata = body.getData().get(0);
             if (bodydata.getIsActive().equals("n")) {
                 showInformationDialog();
             } else {

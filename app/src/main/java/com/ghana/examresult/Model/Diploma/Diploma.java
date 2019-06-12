@@ -1,4 +1,4 @@
-package org.ghanafreightforwarders.examresult.Model.Certificate;
+package com.ghana.examresult.Model.Diploma;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -6,7 +6,7 @@ import com.google.gson.annotations.SerializedName;
 import java.io.Serializable;
 import java.util.List;
 
-public class Certificate implements Serializable {
+public class Diploma implements Serializable {
 
     @SerializedName("success")
     @Expose
@@ -33,7 +33,7 @@ public class Certificate implements Serializable {
 
     @Override
     public String toString() {
-        return "Certificate{" +
+        return "Diploma{" +
                 "success=" + success +
                 ", data=" + data.toString() +
                 '}';

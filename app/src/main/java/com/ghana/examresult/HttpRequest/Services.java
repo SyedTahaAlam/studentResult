@@ -1,8 +1,8 @@
-package org.ghanafreightforwarders.examresult.HttpRequest;
+package com.ghana.examresult.HttpRequest;
 
-import org.ghanafreightforwarders.examresult.Model.Certificate.Certificate;
-import org.ghanafreightforwarders.examresult.Model.Diploma.Diploma;
-import org.ghanafreightforwarders.examresult.Model.HigherDiploma.HigherDiploma;
+import com.ghana.examresult.Model.Certificate.Certificate;
+import com.ghana.examresult.Model.Diploma.Diploma;
+import com.ghana.examresult.Model.HigherDiploma.HigherDiploma;
 
 import retrofit2.Call;
 import retrofit2.http.GET;

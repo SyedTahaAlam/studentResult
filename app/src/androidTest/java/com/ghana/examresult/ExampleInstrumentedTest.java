@@ -1,4 +1,4 @@
-package org.ghanafreightforwarders.examresult;
+package com.ghana.examresult;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;

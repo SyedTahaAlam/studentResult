@@ -1,10 +1,12 @@
-package org.ghanafreightforwarders.examresult;
+package com.ghana.examresult;
 
 import android.app.Dialog;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.TextView;
+
+import com.ghana.examresult.Model.Diploma.Datum;
 
 import java.text.DecimalFormat;
 
@@ -31,19 +33,19 @@ public class ResultActivity extends AppCompatActivity {
             switch (bundle.getInt("type")) {
                 case 1:
                     setContentView(R.layout.result_diploma);
-                    inflateDiploma((org.ghanafreightforwarders.examresult.Model.Diploma.Datum) bundle.getSerializable("bodydata"));
+                    inflateDiploma((Datum) bundle.getSerializable("bodydata"));
 
                     Log.e("certificate", bundle.getSerializable("bodydata").toString());
                     break;
                 case 3:
                     setContentView(R.layout.result_higher_diploma);
-                    inflateHigherDiploma((org.ghanafreightforwarders.examresult.Model.HigherDiploma.Datum) bundle.getSerializable("bodydata"));
+                    inflateHigherDiploma((com.ghana.examresult.Model.HigherDiploma.Datum) bundle.getSerializable("bodydata"));
 
                     Log.e("certificate", bundle.getSerializable("bodydata").toString());
                     break;
                 case 2:
                     setContentView(R.layout.result_certificate_item);
-                    inflateCertificate((org.ghanafreightforwarders.examresult.Model.Certificate.Datum) bundle.getSerializable("bodydata"));
+                    inflateCertificate((com.ghana.examresult.Model.Certificate.Datum) bundle.getSerializable("bodydata"));
 
                     Log.e("certificate", bundle.getSerializable("bodydata").toString());
                     break;
@@ -53,7 +55,7 @@ public class ResultActivity extends AppCompatActivity {
 
     }
 
-    private void inflateHigherDiploma(org.ghanafreightforwarders.examresult.Model.HigherDiploma.Datum bodydata) {
+    private void inflateHigherDiploma(com.ghana.examresult.Model.HigherDiploma.Datum bodydata) {
         TextView name = findViewById(R.id.nhd);
         TextView no = findViewById(R.id.nohd);
         TextView procedure = findViewById(R.id.manage);
@@ -102,7 +104,7 @@ public class ResultActivity extends AppCompatActivity {
         pc.setText(String.valueOf(numberFormat.format(percentage)));
     }
 
-    private void inflateDiploma(org.ghanafreightforwarders.examresult.Model.Diploma.Datum bodydata) {
+    private void inflateDiploma(Datum bodydata) {
         TextView name = findViewById(R.id.nd);
         TextView no = findViewById(R.id.nod);
         TextView ff = findViewById(R.id.ff);
@@ -159,7 +161,7 @@ public class ResultActivity extends AppCompatActivity {
         pc.setText(String.valueOf(numberFormat.format(percentage)));
     }
 
-    private void inflateCertificate(org.ghanafreightforwarders.examresult.Model.Certificate.Datum bodydata) {
+    private void inflateCertificate(com.ghana.examresult.Model.Certificate.Datum bodydata) {
         TextView name = findViewById(R.id.student_name);
         TextView no = findViewById(R.id.student_number);
         TextView ff = findViewById(R.id.intro_to_ff);

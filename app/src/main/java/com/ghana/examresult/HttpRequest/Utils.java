@@ -1,4 +1,4 @@
-package org.ghanafreightforwarders.examresult.HttpRequest;
+package com.ghana.examresult.HttpRequest;
 
 public class Utils {
     private Utils() {}

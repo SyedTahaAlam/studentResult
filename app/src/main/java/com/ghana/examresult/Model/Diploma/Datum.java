@@ -1,4 +1,4 @@
-package org.ghanafreightforwarders.examresult.Model.Diploma;
+package com.ghana.examresult.Model.Diploma;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
